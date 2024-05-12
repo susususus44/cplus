@@ -9,7 +9,7 @@ int main()
     srand(time(0));
     char again = 'y';
     const int NUM_WORDS = 4;
-    const string WORDS[NUM_WORDS][NUM_FIELDS] 
+    const string WORDS[NUM_WORDS][NUM_FIELDS]
     {
         {"wall", "Тебе не хочется обо что-нибудь удариться головой? "},
         {"glasses", "Это может помочь вам увидеть вопрос "},
@@ -26,12 +26,12 @@ int main()
     cout << "Введи слово 'hint' для подсказки\n";
     cout << "Зашифрованное слово " << jumble;
     string guess;
-    cout << "\n\nВаше предложение ";
+    cout << "\n\nВаше предложение: ";
     getline(cin >> ws, guess);
     while (guess != guessword) {
         if (guess == "hint") { cout << hintword; }
         else { cout << "Извините это не то"; }
-        cout <<"\n\nВаше предложение ";
+        cout <<"\n\nВаше предложение: ";
         getline(cin >> ws, guess);
     }
     if (guess == guessword) { cout << "\nВы угадали!" << endl; }
