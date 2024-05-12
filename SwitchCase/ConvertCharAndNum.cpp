@@ -16,7 +16,7 @@ int main()
             break;
         case 2:
             puts("Введите символ");
-            cun >> convertNum;
+            cin >> convertNum;
             if (convertNum < 0 || convertNum > 127) {
                 puts("Неправильный код!");
                 return main();

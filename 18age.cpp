@@ -6,6 +6,5 @@ int main() {
     int age = 0;
     cin >> ws >> age;
     cout << (age < 18 ? "Вам нельзя!" : "Можно!") << endl;
-    
     return 0;
 }
