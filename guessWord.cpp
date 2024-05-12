@@ -2,13 +2,13 @@
 #include <iostream>
 using namespace std;
 
-enum { WORD, HINT, NUM_FIELDS = 5 };
+enum { WORD, HINT, NUM_FIELDS = 4 };
 
 int main()
 {
     srand(time(0));
     char again = 'y';
-    const int NUM_WORDS = 5;
+    const int NUM_WORDS = 4;
     const string WORDS[NUM_WORDS][NUM_FIELDS] 
     {
         {"wall", "Тебе не хочется обо что-нибудь удариться головой? "},
@@ -29,20 +29,15 @@ int main()
     cout << "\n\nВаше предложение ";
     getline(cin >> ws, guess);
     while (guess != guessword) {
-        if (guess == "hint") {
-            cout << hintword;
-        }
-        else {
-            cout << "Извините это не то";
-        }
+        if (guess == "hint") { cout << hintword; }
+        else { cout << "Извините это не то"; }
         cout <<"\n\nВаше предложение ";
-        if (guess == guessword) {
-            cout << "\nВы угадали!" << endl;
-        }
-        cout << "Желаете продолжить? y/n";
-        cin >> again;
-        if (again == 'y') { main(); }
-        else { cout << "Спасибо за игру!\n"; exit(0); }
+        getline(cin >> ws, guess);
     }
+    if (guess == guessword) { cout << "\nВы угадали!" << endl; }
+    cout << "Желаете продолжить? y/n";
+    cin >> again;
+    if (again == 'y') { main(); }
+    else { cout << "Спасибо за игру!\n"; exit(0); }
     return 0;
 }
