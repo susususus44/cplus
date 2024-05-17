@@ -1,6 +1,8 @@
+//task 19
 #include <iostream>
 using namespace std;
 int main() {
+    srand(time(0));
     cout << "Введите количество знаков нового пароля от 3 до 10: ";
     int var = 0;
     cin >> var;
@@ -8,9 +10,9 @@ int main() {
         cout << "Вы вышли за рамки диапазона!" << endl;
     }
     else {
-    for (int i = 0; i <= var; ++i) {
-        cout << i + 1;
-    }
-    cout << endl;
+        for (int i = 0; i <= var - 1; ++i) {
+            cout << rand() % 9;
+        }
+        cout << endl;
     }
 }
