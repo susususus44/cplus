@@ -6,6 +6,11 @@ int main() {
     int password = 0;
     int tries = 0;
     while (true) {
+        if (tries >= 3)
+        {
+            puts("3 неправильные попытки. У вас закончились попытки!!! Попробуйте завтра.");
+            return 0;
+        }
         cout << "Введите логин: ";
         getline(cin >> ws, login);
         cout << "Введите пароль: ";
