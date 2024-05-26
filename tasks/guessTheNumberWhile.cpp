@@ -1,8 +1,7 @@
-//task 25
+//task 26
 #include <iostream>
 using namespace std;
 int main() {
-    while (true) {
     srand(time(0));
     int var = (rand() % 3);
     cout << "Угадай число!" << endl;
@@ -13,5 +12,4 @@ int main() {
     else
         cout << "Не угадали!";
     cout << endl;
-    }
 }
